@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  This template creates an ASG behind an ALB
+
+#Parameters:
+
+Resources:
+
+  rSecGrp:                       #Resource Security Group
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow SSH and HTTP       # Required
+      GroupName: SSHandHTTP
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromP
+      Tags:
+        Tags
+      VpcId: "String"
+
+
+I should maybe watch the monday's video first
+
+
+
+
+
+
+#Outputs:
