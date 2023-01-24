@@ -1,3 +1,4 @@
+---
 AWSTemplateFormatVersion: 2010-09-09
 Description: |
   CloudFormation template to deploy the Roman Numeral Converter web application
@@ -17,10 +18,10 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-  MyEC2Instance: #An inline comment
-    Type: "AWS::EC2::Instance"
+  WebServerofStackName: 
+    Type: AWS::EC2::Instance
     Properties: 
-      ImageId: "ami-0b5eea76982371e91" #Another comment -- This is a Linux AMI
+      ImageId: ami-0b5eea76982371e91 # ami id for US East 1
       InstanceType: t2.micro
       KeyName: firstkey
       SecurityGroupIds:

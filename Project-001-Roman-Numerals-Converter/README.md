@@ -71,11 +71,11 @@ Ten         Warning with "Not Valid! Please enter a number between 1 and 3999, i
 
    - Instance launched by Cloudformation should be tagged `Web Server of StackName` 
 
-   - The Web Application should be accessible via web browser and terminal from anywhere.
+   - ????????? The Web Application should be accessible via web browser and terminal from anywhere. #????? 
 
    - The Application files should be downloaded from Github repo and deployed on EC2 Instance using user data script within cloudformation template. 
 
-   - Roman Numerals Converter Application Website URL should be given as output by Cloudformation Service, after the stack created.
+   - Roman Numerals Converter Application Website URL should be given as output by Cloudformation Service, after the stack created. ####?????
 
 - Lastly, try to deploy same infrastructure using AWS CLI commands to showcase your project. 
 
