@@ -18,7 +18,7 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-  WebServerofStackName: 
+  WebServerHost: 
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: ami-0b5eea76982371e91 # ami id for US East 1
