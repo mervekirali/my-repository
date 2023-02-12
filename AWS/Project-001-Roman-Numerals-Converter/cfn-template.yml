@@ -39,10 +39,21 @@ Resources:
         - Key: Name
           Value: WebServer2-Merve
       UserData:
-      |
-        #!/bin/bash
-        yum update -y
-        yum install httpd -y
+        Fn::Base64:
+        |
+          #!/bin/bash -x
+          yum update -y
+          yum install python3 -y
+          pip3 install flask
+          cd /home/ec2-user
+          FOLDER="https://raw.githubusercontent.com/mervekirali/my-repository/main/AWS/Project-001-Roman-Numerals-Converter/"
+          wget ${FOLDER}app.py
+          mkdir templates
+          cd templates
+          wget ${FOLDER}templates/index.html
+          wget ${FOLDER}templates/result.html
+          cd ..
+          python3 app.py
         
 
         
