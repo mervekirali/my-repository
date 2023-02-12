@@ -11,20 +11,22 @@ def convert(decimal_num):
         decimal_num %= i
     return num_to_roman
 
-
 @app.route('/', methods=['POST', 'GET'])
 def main_post():
     if request.method == 'POST':
-        alpha = request.form['number']
+        alpha = str(request.form['number'])        
         if not alpha.isdecimal():
-            return render_template('index.html', developer_name='Merve', not_valid=True)
-        number = int(alpha)
-        if not 0 < number < 4000:
-            return render_template('index.html', developer_name='Merve', not_valid=True)
-        return render_template('result.html', number_decimal = number , number_roman= convert(number), developer_name='Merve')
+            return render_template('index.html', developer_name='Altaz', not_valid=True)
+        else:
+            number = int(alpha)
+            if not 0 < number < 4000:
+                return render_template('index.html', developer_name='Altaz', not_valid=True)
+            else:
+                roman_number = convert(number)
+                return render_template('result.html', number_decimal=number, number_roman=roman_number, developer_name='Altaz')
     else:
-        return render_template('index.html', developer_name='Merve', not_valid=False)
+        return render_template('index.html', developer_name='Altaz', not_valid=False)
 
 if __name__ == '__main__':
-    #app.run(debug=True)
-    app.run(host='0.0.0.0', port=80)
+    app.run(debug=True)
+    #app.run(host='0.0.0.0', port=80)
