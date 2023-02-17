@@ -63,4 +63,10 @@ Resources:
 
   
   
-#Outputs:
+
+Outputs:
+  WebsiteURL:
+    Value: !Sub
+      - http://${PublicAddress}
+      - PublicAddress: !GetAtt WebServerHost.PublicDnsName
+    Description: Roman Numerals Converter Application URL
